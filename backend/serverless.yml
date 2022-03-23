@@ -1,0 +1,17 @@
+service: ten-day-forecast-backend
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  profile: tenDayForecastUser # profile created when configuring aws credentials
+
+functions:
+  getForecastByZipcode:
+    handler: lambdas/getForecastByZipcode.handler # handler lambda function in backend/lambdas
+    events:
+      # http GET request on /forecast will trigger the lambda function
+      - httpApi:
+          path: /forecast
+          method: get
