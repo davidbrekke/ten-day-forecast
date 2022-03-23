@@ -7,7 +7,7 @@ const Layout = ({ children }) => (
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <meta name="description" content="10 day forecast application" />
     </Head>
-    <div className="h-screen w-screen bg-blue-300">
+    <div className="h-screen w-screen bg-blue-300 overflow-scroll">
       <main className="min-h-screen max-w-6xl m-auto flex flex-col items-center gap-6">
         {children}
       </main>
