@@ -4,7 +4,8 @@ const responses = {
     return {
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': 'http://localhost:3000',
+        'Access-Control-Allow-Origin':
+          'http://localhost:3000, https://ten-day-forecast.vercel.app/',
         'Access-Control-Allow-Methods': 'GET',
       },
       statusCode: 200,
@@ -16,7 +17,8 @@ const responses = {
     return {
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': 'http://localhost:3000',
+        'Access-Control-Allow-Origin':
+          'http://localhost:3000, https://ten-day-forecast.vercel.app/',
         'Access-Control-Allow-Methods': 'GET',
       },
       statusCode: 400,
