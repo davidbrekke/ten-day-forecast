@@ -8,7 +8,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy-lambda": "cd backend && sls deploy"
   },
   "dependencies": {
     "next": "^12.1.0",
