@@ -1,7 +1,13 @@
 import { isValidUSZipcode } from '@utils/isValidUSZipcode'
 import { awsEndpoint } from '@utils/awsEndpoint'
 
-const ZipcodeSearch = ({ zipcode, setZipcode, setError, setForecasts }) => {
+const ZipcodeSearch = ({
+  zipcode,
+  setZipcode,
+  setError,
+  setForecasts,
+  setIsLoading,
+}) => {
   const handleForecastSearch = async () => {
     if (zipcode === '') {
       setError('please enter a US zipcode')
@@ -12,9 +18,17 @@ const ZipcodeSearch = ({ zipcode, setZipcode, setError, setForecasts }) => {
       return
     }
     if (isValidUSZipcode(zipcode)) {
+      setForecasts(null)
       setError(null)
+      setIsLoading(true)
       const response = await fetch(awsEndpoint(zipcode))
+      if (!response.ok) {
+        setError(response.statusText)
+        setIsLoading(false)
+        return
+      }
       const responseData = await response.json()
+      setIsLoading(false)
       setForecasts(responseData.data.timelines)
     }
   }
