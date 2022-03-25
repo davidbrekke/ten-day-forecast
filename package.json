@@ -10,9 +10,9 @@
   ],
   "scripts": {
     "dev": "yarn workspace ten-day-forecast-frontend dev",
-    "build": "yarn workspace ten-day-forecast-frontend build",
-    "start": "yarn workspace ten-day-forecast-frontend start",
-    "lint": "yarn workspace ten-day-forecast-frontend lint",
+    "build-fe": "yarn workspace ten-day-forecast-frontend build",
+    "start-fe": "yarn workspace ten-day-forecast-frontend start",
+    "lint-fe": "yarn workspace ten-day-forecast-frontend lint",
     "deploy": "yarn workspace ten-day-forecast-backend deploy"
   }
 }
