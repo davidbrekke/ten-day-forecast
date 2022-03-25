@@ -1,0 +1,11 @@
+{
+  "name": "ten-day-forecast-backend",
+  "version": "0.1.0",
+  "description": "ten day forecast application backend using aws api gateway and lambda functions",
+  "author": "david magnuson",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "deploy": "sls deploy"
+  }
+}

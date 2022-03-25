@@ -1,27 +1,18 @@
 {
   "name": "ten-day-forecast",
   "version": "0.1.0",
-  "description": "ten day forecast application using aws api gateway and lambda functions",
+  "description": "ten day forecast application monoerepo",
   "author": "david magnuson",
   "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "deploy-lambda": "cd backend && sls deploy"
-  },
-  "dependencies": {
-    "next": "^12.1.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.4",
-    "eslint": "8.11.0",
-    "eslint-config-next": "12.1.0",
-    "postcss": "^8.4.12",
-    "prettier": "^2.6.0",
-    "tailwindcss": "^3.0.23"
+    "dev": "yarn workspace ten-day-forecast-frontend dev",
+    "build": "yarn workspace ten-day-forecast-frontend build",
+    "start": "yarn workspace ten-day-forecast-frontend start",
+    "lint": "yarn workspace ten-day-forecast-frontend lint",
+    "deploy": "yarn workspace ten-day-forecast-backend deploy"
   }
 }
