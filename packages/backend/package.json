@@ -6,6 +6,7 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "deploy": "sls deploy"
+    "deploy": "sls deploy",
+    "deploy-prod": "sls deploy --stage prod"
   }
 }

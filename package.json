@@ -13,6 +13,7 @@
     "build-fe": "yarn workspace ten-day-forecast-frontend build",
     "start-fe": "yarn workspace ten-day-forecast-frontend start",
     "lint-fe": "yarn workspace ten-day-forecast-frontend lint",
-    "deploy": "yarn workspace ten-day-forecast-backend deploy"
+    "deploy": "yarn workspace ten-day-forecast-backend deploy",
+    "deploy-prod": "yarn workspace ten-day-forecast-backend deploy-prod"
   }
 }

@@ -1,23 +1,3 @@
-const responses = require('./api-responses')
-
-exports.handler = async (event) => {
-  // no zipcode provided
-  if (!event.queryStringParameters || !event.queryStringParameters.zipcode) {
-    return responses._400({ message: 'missing zipcode query string parameter' })
-  }
-
-  // get the zipcode from the query string parameters
-  const zipcode = event.queryStringParameters.zipcode
-
-  // get the forecast for the zipcode
-  if (zipcodes[zipcode]) {
-    return responses._200(zipcodes[zipcode])
-  }
-
-  // zipcode not found in data
-  return responses._400({ message: 'zipcode not found in data' })
-}
-
 // zipcodes forecast data
 const zipcodes = {
   90210: {
@@ -656,4 +636,6 @@ const zipcodes = {
       ],
     },
   },
-}
+};
+
+module.exports = zipcodes;
