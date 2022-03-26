@@ -12,6 +12,12 @@
   },
   "devDependencies": {
     "serverless": "^3.10.0",
-    "serverless-offline": "^8.5.0"
+    "serverless-offline": "^8.5.0",
+    "serverless-plugin-monorepo": "^0.11.0"
+  },
+  "dependencies": {
+    "axios": "^0.26.1",
+    "moment": "^2.29.1",
+    "query-string": "^7.1.1"
   }
 }
