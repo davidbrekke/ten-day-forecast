@@ -6,7 +6,12 @@
   "private": true,
   "license": "MIT",
   "scripts": {
+    "dev": "sls offline --httpPort 4000 -s test",
     "deploy": "sls deploy",
-    "deploy-prod": "sls deploy --stage prod"
+    "deploy:prod": "sls deploy -s prod"
+  },
+  "devDependencies": {
+    "serverless": "^3.10.0",
+    "serverless-offline": "^8.5.0"
   }
 }

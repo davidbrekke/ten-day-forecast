@@ -19,7 +19,7 @@ yarn dev
 build frontend for production
 
 ```bash
-yarn build-fe
+yarn build:fe
 ```
 
 deploy backend to aws dev environment
@@ -31,7 +31,7 @@ yarn deploy
 deploy backend to aws prod environment
 
 ```bash
-yarn deploy-prod
+yarn deploy:prod
 ```
 
 ### backend

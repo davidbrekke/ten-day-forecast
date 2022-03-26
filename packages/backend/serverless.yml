@@ -6,7 +6,7 @@ provider:
   name: aws
   runtime: nodejs12.x
   region: us-east-1
-  stage: ${opt:stage, 'dev'} # stage defaults to 'dev', override with --stage flag
+  stage: ${opt:stage, 'test'} # stage defaults to 'test', override with --stage flag
   profile: tenDayForecastUser # profile created when configuring aws credentials
 
 functions:
@@ -17,3 +17,6 @@ functions:
       - httpApi:
           path: /forecast
           method: get
+
+plugins:
+  - serverless-offline
