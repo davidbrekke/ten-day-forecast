@@ -9,17 +9,22 @@ exports.main = async (event) => {
     });
   }
 
-  // get the zipcode from the query string parameters
-  const zipcode = event.queryStringParameters.zipcode;
+  try {
+    // get the zipcode from the query string parameters
+    const zipcode = event.queryStringParameters.zipcode;
 
-  // get the forecast for the zipcode
-  const forecast = await getForecastByZipcode(zipcode);
+    // get the forecast for the zipcode
+    const forecast = await getForecastByZipcode(zipcode);
 
-  // return the forecast if found
-  if (forecast) {
-    return responses._200(forecast);
+    // return the forecast if found
+    if (forecast) {
+      return responses._200(forecast);
+    }
+
+    // zipcode not found in data
+    return responses._400({ message: 'zipcode not found in data' });
+  } catch (error) {
+    console.error('error in main: ', error);
+    return responses._500({ message: 'internal server error :(' });
   }
-
-  // zipcode not found in data
-  return responses._400({ message: 'zipcode not found in data' });
 };
