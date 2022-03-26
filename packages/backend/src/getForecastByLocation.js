@@ -10,8 +10,8 @@ const tomorrowAPIKey = 'kiZx6jJIbou2zG5ukrAoiIw5B5MuQP03';
 const fields = ['windSpeed', 'temperature', 'weatherCode'];
 // choose the unit system, either metric or imperial
 const units = 'imperial';
-// set the timesteps, "current" and "1d"
-const timesteps = ['current', '1d'];
+// set the timesteps, "1d"
+const timesteps = ['1d'];
 // configure the time frame from now to 10 days out
 const now = moment.utc();
 const startTime = moment.utc(now).add(0, 'minutes').toISOString();
