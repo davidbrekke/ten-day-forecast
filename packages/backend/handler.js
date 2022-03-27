@@ -25,6 +25,6 @@ exports.main = async (event) => {
     return responses._400({ message: 'zipcode not found in data' });
   } catch (error) {
     console.error('error in main: ', error);
-    return responses._500({ message: 'internal server error :(' });
+    return responses._400({ message: 'internal server error :(' });
   }
 };
