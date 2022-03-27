@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "axios": "^0.26.1",
+    "dotenv": "^16.0.0",
     "moment": "^2.29.1",
     "query-string": "^7.1.1"
   }
