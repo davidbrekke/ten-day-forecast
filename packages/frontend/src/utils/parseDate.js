@@ -1,4 +1,6 @@
 const parseDate = (date) =>
   `${new Date(date).getMonth()}/${new Date(date).getDate()}`
 
-export { parseDate }
+const getDayOfWeek = (date) => new Date(date).getDay()
+
+export { parseDate, getDayOfWeek }
