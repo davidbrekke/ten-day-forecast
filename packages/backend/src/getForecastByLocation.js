@@ -1,11 +1,12 @@
-const axios = require('axios').default;
+const axios = require('axios');
 const moment = require('moment');
 const queryString = require('query-string');
+require('dotenv').config();
 
 // tomorrow API key
 const tomorrowURL = 'https://api.tomorrow.io/v4/timelines';
 // tomorrow.io API key
-const tomorrowAPIKey = 'kiZx6jJIbou2zG5ukrAoiIw5B5MuQP03';
+const tomorrowAPIKey = process.env.TOMORROW_API_KEY;
 // forecast fields to query
 const fields = ['windSpeed', 'temperature', 'weatherCode'];
 // choose the unit system, either metric or imperial

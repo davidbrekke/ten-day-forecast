@@ -9,7 +9,7 @@ const responses = {
       },
       statusCode: 200,
       body: JSON.stringify(data),
-    }
+    };
   },
   // Lambda response for failed API call
   _400(data = {}) {
@@ -21,8 +21,8 @@ const responses = {
       },
       statusCode: 400,
       body: JSON.stringify(data),
-    }
+    };
   },
-}
+};
 
-module.exports = responses
+module.exports = responses;

@@ -1,6 +1,7 @@
-const axios = require('axios').default;
+const axios = require('axios');
+require('dotenv').config();
 
-const rapidAPIKey = '44cdaafa14mshcacd0e636931634p17802cjsnee6262a124b2';
+const rapidAPIKey = process.env.RAPID_API_KEY;
 const redlineAPIURL =
   'https://redline-redline-zipcode.p.rapidapi.com/rest/info.json';
 
